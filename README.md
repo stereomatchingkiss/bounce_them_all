@@ -20,10 +20,6 @@ A collection of independent game projects for practicing game development with G
 - [KayKit - Character Pack : Adventurers](https://kaylousberg.itch.io/kaykit-adventurers)
 - [KayKit : Block Bits](https://kaylousberg.itch.io/block-bits)
 - [KayKit_Platformer_Pack_1.0_FREE](https://kaylousberg.itch.io/kaykit-platformer)
-- [Kenny mini arena](https://kenney.nl/assets/mini-arena)
-- [Kenny pirate kit](https://kenney.nl/assets/pirate-kit)
-- [AllSky Free](https://godotengine.org/asset-library/asset/579)
-- [Cozy Voxel Skybox](https://thomasgamboa.itch.io/cozy-voxel-skybox-free-voxel-style-textures)
 - [Ultimate monster pack](https://quaternius.com/packs/ultimatemonsters.html)
 
 ## Fonts
