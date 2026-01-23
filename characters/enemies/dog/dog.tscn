@@ -1,7 +1,7 @@
 [gd_scene load_steps=29 format=4 uid="uid://pwu6jjxts73x"]
 
 [ext_resource type="Texture2D" uid="uid://cmd10k6r5u700" path="res://assets/characters/enemies/universal_monster_texture.png" id="1_be8m2"]
-[ext_resource type="Script" uid="uid://djty4j0mnwdlj" path="res://enemies/dog/dog.gd" id="1_hguxn"]
+[ext_resource type="Script" uid="uid://djty4j0mnwdlj" path="res://characters/enemies/dog/dog.gd" id="1_hguxn"]
 [ext_resource type="PackedScene" uid="uid://s2tdallyq144" path="res://bullets/bullet_ball.tscn" id="3_j5fq5"]
 [ext_resource type="Script" uid="uid://cj30npa05bj7b" path="res://characters/enemies/dog/states_limbo/state_machine_utils.gd" id="4_km3m6"]
 [ext_resource type="Script" uid="uid://bll71lm1fe1mm" path="res://characters/enemies/states_limbo/state_falling.gd" id="4_qxks3"]
