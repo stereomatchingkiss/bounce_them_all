@@ -1,0 +1,239 @@
+[gd_scene load_steps=60 format=3 uid="uid://c06atnhdm6p88"]
+
+[ext_resource type="Script" uid="uid://c3fmbq0f7qvs3" path="res://utils/sort_model.gd" id="1_8grsq"]
+[ext_resource type="PackedScene" uid="uid://dby53rolqshfu" path="res://assets/environment_models/kaykit/blockBits/gltf/anvil.gltf" id="2_u4ere"]
+[ext_resource type="PackedScene" uid="uid://cic4k5tqgn6v7" path="res://assets/environment_models/kaykit/blockBits/gltf/apple.gltf" id="3_41qvb"]
+[ext_resource type="PackedScene" uid="uid://dm82wn87uraf6" path="res://assets/environment_models/kaykit/blockBits/gltf/barrel.gltf" id="4_ygu7d"]
+[ext_resource type="PackedScene" uid="uid://cfch13f8my7y1" path="res://assets/environment_models/kaykit/blockBits/gltf/battery.gltf" id="5_vbob0"]
+[ext_resource type="PackedScene" uid="uid://d1benww11wwo3" path="res://assets/environment_models/kaykit/blockBits/gltf/books_A.gltf" id="6_eb710"]
+[ext_resource type="PackedScene" uid="uid://pnriiwuv6jtc" path="res://assets/environment_models/kaykit/blockBits/gltf/books_B.gltf" id="7_j0ncc"]
+[ext_resource type="PackedScene" uid="uid://bluc4t2pcn4iu" path="res://assets/environment_models/kaykit/blockBits/scenes/bricks_b_2.tscn" id="8_eb710"]
+[ext_resource type="PackedScene" uid="uid://dtxa3hkoylgaw" path="res://assets/environment_models/kaykit/blockBits/gltf/chest.gltf" id="10_mryum"]
+[ext_resource type="PackedScene" uid="uid://ombaorny7jua" path="res://assets/environment_models/kaykit/blockBits/gltf/colored_block_blue.gltf" id="11_55rfc"]
+[ext_resource type="PackedScene" uid="uid://beml1487mbl42" path="res://assets/environment_models/kaykit/blockBits/gltf/colored_block_green.gltf" id="12_6ayt7"]
+[ext_resource type="PackedScene" uid="uid://b0bgrdvx8np5j" path="res://assets/environment_models/kaykit/blockBits/gltf/colored_block_red.gltf" id="13_f5efo"]
+[ext_resource type="PackedScene" uid="uid://b057hisn2qcfr" path="res://assets/environment_models/kaykit/blockBits/gltf/colored_block_yellow.gltf" id="14_odnnp"]
+[ext_resource type="PackedScene" uid="uid://bywfuxbum7w0j" path="res://assets/environment_models/kaykit/blockBits/gltf/computer.gltf" id="15_5npbi"]
+[ext_resource type="PackedScene" uid="uid://bidycvftct44m" path="res://assets/environment_models/kaykit/blockBits/gltf/crate.gltf" id="16_0qipl"]
+[ext_resource type="PackedScene" uid="uid://c0d7n0ak5ql7t" path="res://assets/environment_models/kaykit/blockBits/gltf/decorative_block_blue.gltf" id="17_4ifsj"]
+[ext_resource type="PackedScene" uid="uid://dyvlxpbwxlk6t" path="res://assets/environment_models/kaykit/blockBits/gltf/decorative_block_green.gltf" id="18_dliju"]
+[ext_resource type="PackedScene" uid="uid://yjfsh5q8xxqv" path="res://assets/environment_models/kaykit/blockBits/gltf/decorative_block_red.gltf" id="19_5a7cs"]
+[ext_resource type="PackedScene" uid="uid://dwrwtadx5hs8y" path="res://assets/environment_models/kaykit/blockBits/gltf/decorative_block_yellow.gltf" id="20_uva0n"]
+[ext_resource type="PackedScene" uid="uid://dk26c3gie73r5" path="res://assets/environment_models/kaykit/blockBits/gltf/dirt.gltf" id="21_lapd5"]
+[ext_resource type="PackedScene" uid="uid://bx8of5kh2qvbu" path="res://assets/environment_models/kaykit/blockBits/gltf/dirt_with_grass.gltf" id="22_1iihr"]
+[ext_resource type="PackedScene" uid="uid://d3k3rtta7p4yl" path="res://assets/environment_models/kaykit/blockBits/gltf/dirt_with_snow.gltf" id="23_xora8"]
+[ext_resource type="PackedScene" uid="uid://bsrrefjfnul7k" path="res://assets/environment_models/kaykit/blockBits/gltf/dynamite.gltf" id="24_buymg"]
+[ext_resource type="PackedScene" uid="uid://bdeb0fqwwyjq" path="res://assets/environment_models/kaykit/blockBits/gltf/gift.gltf" id="25_8v7bi"]
+[ext_resource type="PackedScene" uid="uid://kka8s3kpu06l" path="res://assets/environment_models/kaykit/blockBits/gltf/glass.gltf" id="26_w0xe7"]
+[ext_resource type="PackedScene" uid="uid://ci6grxxigntr7" path="res://assets/environment_models/kaykit/blockBits/gltf/grass.gltf" id="27_ssabf"]
+[ext_resource type="PackedScene" uid="uid://vjxb3p1m2wvr" path="res://assets/environment_models/kaykit/blockBits/gltf/grass_with_snow.gltf" id="28_emr6p"]
+[ext_resource type="PackedScene" uid="uid://bs3cr181u0hsy" path="res://assets/environment_models/kaykit/blockBits/gltf/gravel.gltf" id="29_mxk5q"]
+[ext_resource type="PackedScene" uid="uid://jh7i5cio8qdn" path="res://assets/environment_models/kaykit/blockBits/gltf/gravel_with_grass.gltf" id="30_2vi2d"]
+[ext_resource type="PackedScene" uid="uid://ckvfyh1574w21" path="res://assets/environment_models/kaykit/blockBits/gltf/gravel_with_snow.gltf" id="31_04qgl"]
+[ext_resource type="PackedScene" uid="uid://cscsuhsptihsa" path="res://assets/environment_models/kaykit/blockBits/gltf/hay.gltf" id="32_0p4cy"]
+[ext_resource type="PackedScene" uid="uid://bsuynijcjjqs1" path="res://assets/environment_models/kaykit/blockBits/gltf/hay_bale.gltf" id="33_eqraw"]
+[ext_resource type="PackedScene" uid="uid://duyko2fjgefd" path="res://assets/environment_models/kaykit/blockBits/gltf/lava.gltf" id="34_wddft"]
+[ext_resource type="PackedScene" uid="uid://bmtfs5ntehpn4" path="res://assets/environment_models/kaykit/blockBits/gltf/melon.gltf" id="35_poh1x"]
+[ext_resource type="PackedScene" uid="uid://cpcd62dcotg0x" path="res://assets/environment_models/kaykit/blockBits/gltf/metal.gltf" id="36_qnn1d"]
+[ext_resource type="PackedScene" uid="uid://dsyxlt1ntdmpt" path="res://assets/environment_models/kaykit/blockBits/gltf/metalframe.gltf" id="37_5p6vv"]
+[ext_resource type="PackedScene" uid="uid://cvkt5eaun6ybl" path="res://assets/environment_models/kaykit/blockBits/gltf/pipe.gltf" id="38_kct6i"]
+[ext_resource type="PackedScene" uid="uid://bcxi5tpiut6uv" path="res://assets/environment_models/kaykit/blockBits/gltf/prototype.gltf" id="39_fc7ik"]
+[ext_resource type="PackedScene" uid="uid://ccwtb7r5i02df" path="res://assets/environment_models/kaykit/blockBits/gltf/sand_A.gltf" id="40_x3fsi"]
+[ext_resource type="PackedScene" uid="uid://fxg8lpp3bb3p" path="res://assets/environment_models/kaykit/blockBits/gltf/sand_B.gltf" id="41_sftj6"]
+[ext_resource type="PackedScene" uid="uid://b0lhh43pwp6u6" path="res://assets/environment_models/kaykit/blockBits/gltf/sand_with_grass.gltf" id="42_15amc"]
+[ext_resource type="PackedScene" uid="uid://dlklorvtn32wm" path="res://assets/environment_models/kaykit/blockBits/gltf/sand_with_snow.gltf" id="43_otcta"]
+[ext_resource type="PackedScene" uid="uid://bwk8jmbml8iss" path="res://assets/environment_models/kaykit/blockBits/gltf/snow.gltf" id="44_vi2kl"]
+[ext_resource type="PackedScene" uid="uid://bbej8aafe8qs2" path="res://assets/environment_models/kaykit/blockBits/gltf/stone.gltf" id="45_ut5qc"]
+[ext_resource type="PackedScene" uid="uid://b28q83l0151mm" path="res://assets/environment_models/kaykit/blockBits/gltf/stone_dark.gltf" id="46_8wyf8"]
+[ext_resource type="PackedScene" uid="uid://c0aqt0q3s3o0g" path="res://assets/environment_models/kaykit/blockBits/gltf/stone_with_copper.gltf" id="47_02wow"]
+[ext_resource type="PackedScene" uid="uid://8r46tmnfikgh" path="res://assets/environment_models/kaykit/blockBits/gltf/stone_with_gold.gltf" id="48_cnixw"]
+[ext_resource type="PackedScene" uid="uid://cp2f8lkgcynq0" path="res://assets/environment_models/kaykit/blockBits/gltf/stone_with_silver.gltf" id="49_bvmub"]
+[ext_resource type="PackedScene" uid="uid://bahcn84rc1nx" path="res://assets/environment_models/kaykit/blockBits/gltf/striped_block_blue.gltf" id="50_3b5rj"]
+[ext_resource type="PackedScene" uid="uid://cbc2jl40sr43f" path="res://assets/environment_models/kaykit/blockBits/gltf/striped_block_green.gltf" id="51_brsaf"]
+[ext_resource type="PackedScene" uid="uid://0cg1a1mxtxjh" path="res://assets/environment_models/kaykit/blockBits/gltf/striped_block_red.gltf" id="52_at8yl"]
+[ext_resource type="PackedScene" uid="uid://c2mydldvs0rmq" path="res://assets/environment_models/kaykit/blockBits/gltf/striped_block_yellow.gltf" id="53_fbvan"]
+[ext_resource type="PackedScene" uid="uid://b8nd6rtyeqqoh" path="res://assets/environment_models/kaykit/blockBits/gltf/trashcan.gltf" id="54_tlfjc"]
+[ext_resource type="PackedScene" uid="uid://pi8svw15cbpo" path="res://assets/environment_models/kaykit/blockBits/gltf/tree.gltf" id="55_bfpi5"]
+[ext_resource type="PackedScene" uid="uid://bly1idxskcn8p" path="res://assets/environment_models/kaykit/blockBits/gltf/tree_with_snow.gltf" id="56_1n5p4"]
+[ext_resource type="PackedScene" uid="uid://b6wif40dosy2p" path="res://assets/environment_models/kaykit/blockBits/gltf/vault.gltf" id="57_5poqu"]
+[ext_resource type="PackedScene" uid="uid://brmx7mixq1p2v" path="res://assets/environment_models/kaykit/blockBits/gltf/water.gltf" id="58_riyye"]
+[ext_resource type="PackedScene" uid="uid://cwwxqtgmbbkbu" path="res://assets/environment_models/kaykit/blockBits/scenes/bricks_a_2.tscn" id="59_eb710"]
+[ext_resource type="PackedScene" uid="uid://d025lvnmpfbjq" path="res://assets/environment_models/kaykit/blockBits/gltf/wood.gltf" id="59_gpi48"]
+
+[node name="kaykitBlockBits" type="Node3D"]
+script = ExtResource("1_8grsq")
+offset_x = 2.2
+offset_z = -2.2
+
+[node name="anvil2" parent="." instance=ExtResource("2_u4ere")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2, 0, 0)
+
+[node name="apple2" parent="." instance=ExtResource("3_41qvb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.4, 0, 0)
+
+[node name="barrel2" parent="." instance=ExtResource("4_ygu7d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.6, 0, 0)
+
+[node name="battery2" parent="." instance=ExtResource("5_vbob0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.8, 0, 0)
+
+[node name="books_A2" parent="." instance=ExtResource("6_eb710")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 0)
+
+[node name="books_B2" parent="." instance=ExtResource("7_j0ncc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2, 0, -2.2)
+
+[node name="bricks_B2" parent="." instance=ExtResource("8_eb710")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.2300115, 0)
+
+[node name="chest2" parent="." instance=ExtResource("10_mryum")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.8, 0, -2.2)
+
+[node name="colored_block_blue2" parent="." instance=ExtResource("11_55rfc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -2.2)
+
+[node name="colored_block_green2" parent="." instance=ExtResource("12_6ayt7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2, 0, -4.4)
+
+[node name="colored_block_red2" parent="." instance=ExtResource("13_f5efo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.4, 0, -4.4)
+
+[node name="colored_block_yellow2" parent="." instance=ExtResource("14_odnnp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.6, 0, -4.4)
+
+[node name="computer2" parent="." instance=ExtResource("15_5npbi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.8, 0, -4.4)
+
+[node name="crate2" parent="." instance=ExtResource("16_0qipl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -4.4)
+
+[node name="decorative_block_blue2" parent="." instance=ExtResource("17_4ifsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2, 0, -6.6)
+
+[node name="decorative_block_green2" parent="." instance=ExtResource("18_dliju")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.4, 0, -6.6)
+
+[node name="decorative_block_red2" parent="." instance=ExtResource("19_5a7cs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.6, 0, -6.6)
+
+[node name="decorative_block_yellow2" parent="." instance=ExtResource("20_uva0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.8, 0, -6.6)
+
+[node name="dirt2" parent="." instance=ExtResource("21_lapd5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -6.6)
+
+[node name="dirt_with_grass2" parent="." instance=ExtResource("22_1iihr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2, 0, -8.8)
+
+[node name="dirt_with_snow2" parent="." instance=ExtResource("23_xora8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.4, 0, -8.8)
+
+[node name="dynamite2" parent="." instance=ExtResource("24_buymg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.6, 0, -8.8)
+
+[node name="gift2" parent="." instance=ExtResource("25_8v7bi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.8, 0, -8.8)
+
+[node name="glass2" parent="." instance=ExtResource("26_w0xe7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -8.8)
+
+[node name="grass2" parent="." instance=ExtResource("27_ssabf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2, 0, -11)
+
+[node name="grass_with_snow2" parent="." instance=ExtResource("28_emr6p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.4, 0, -11)
+
+[node name="gravel2" parent="." instance=ExtResource("29_mxk5q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.6, 0, -11)
+
+[node name="gravel_with_grass2" parent="." instance=ExtResource("30_2vi2d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.8, 0, -11)
+
+[node name="gravel_with_snow2" parent="." instance=ExtResource("31_04qgl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -11)
+
+[node name="hay2" parent="." instance=ExtResource("32_0p4cy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2, 0, -13.2)
+
+[node name="hay_bale2" parent="." instance=ExtResource("33_eqraw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.4, 0, -13.2)
+
+[node name="lava2" parent="." instance=ExtResource("34_wddft")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.6, 0, -13.2)
+
+[node name="melon2" parent="." instance=ExtResource("35_poh1x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.8, 0, -13.2)
+
+[node name="metal2" parent="." instance=ExtResource("36_qnn1d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -13.2)
+
+[node name="metalframe2" parent="." instance=ExtResource("37_5p6vv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2, 0, -15.4)
+
+[node name="pipe2" parent="." instance=ExtResource("38_kct6i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.4, 0, -15.4)
+
+[node name="prototype2" parent="." instance=ExtResource("39_fc7ik")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.6, 0, -15.4)
+
+[node name="sand_A2" parent="." instance=ExtResource("40_x3fsi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.8, 0, -15.4)
+
+[node name="sand_B2" parent="." instance=ExtResource("41_sftj6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -15.4)
+
+[node name="sand_with_grass2" parent="." instance=ExtResource("42_15amc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2, 0, -17.6)
+
+[node name="sand_with_snow2" parent="." instance=ExtResource("43_otcta")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.4, 0, -17.6)
+
+[node name="snow2" parent="." instance=ExtResource("44_vi2kl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.6, 0, -17.6)
+
+[node name="stone2" parent="." instance=ExtResource("45_ut5qc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.8, 0, -17.6)
+
+[node name="stone_dark2" parent="." instance=ExtResource("46_8wyf8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -17.6)
+
+[node name="stone_with_copper2" parent="." instance=ExtResource("47_02wow")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2, 0, -19.8)
+
+[node name="stone_with_gold2" parent="." instance=ExtResource("48_cnixw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.4, 0, -19.8)
+
+[node name="stone_with_silver2" parent="." instance=ExtResource("49_bvmub")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.6, 0, -19.8)
+
+[node name="striped_block_blue2" parent="." instance=ExtResource("50_3b5rj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.8, 0, -19.8)
+
+[node name="striped_block_green2" parent="." instance=ExtResource("51_brsaf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -19.8)
+
+[node name="striped_block_red2" parent="." instance=ExtResource("52_at8yl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2, 0, -22)
+
+[node name="striped_block_yellow2" parent="." instance=ExtResource("53_fbvan")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.4, 0, -22)
+
+[node name="trashcan2" parent="." instance=ExtResource("54_tlfjc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.6, 0, -22)
+
+[node name="tree2" parent="." instance=ExtResource("55_bfpi5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.8, 0, -22)
+
+[node name="tree_with_snow2" parent="." instance=ExtResource("56_1n5p4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -22)
+
+[node name="vault2" parent="." instance=ExtResource("57_5poqu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2, 0, -24.2)
+
+[node name="water2" parent="." instance=ExtResource("58_riyye")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.4, 0, -24.2)
+
+[node name="wood2" parent="." instance=ExtResource("59_gpi48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.6, 0, -24.2)
+
+[node name="bricks_A2" parent="." instance=ExtResource("59_eb710")]

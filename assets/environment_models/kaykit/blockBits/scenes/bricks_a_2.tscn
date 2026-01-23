@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwwxqtgmbbkbu"]
+
+[ext_resource type="PackedScene" uid="uid://dkbsukxoynkhq" path="res://assets/environment_models/kaykit/blockBits/gltf/bricks_A.gltf" id="1_uldf6"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1kqvp"]
+size = Vector3(2, 2, 2)
+
+[node name="bricks_A2" instance=ExtResource("1_uldf6")]
+
+[node name="CollisionShape3D" parent="bricks_A/StaticBody3D" index="0"]
+shape = SubResource("BoxShape3D_1kqvp")

@@ -1,0 +1,6 @@
+[gd_resource type="Gradient" format=3 uid="uid://eeky6q0scc35"]
+
+[resource]
+resource_name = "gradient_cel_01"
+offsets = PackedFloat32Array(0, 0.914611, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.86337763, 0.86337763, 0.86337763, 1, 1, 1, 1, 1)
