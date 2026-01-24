@@ -33,3 +33,4 @@ func _update(delta: float) -> void:
 		if agent.input_cache.get_shoot():
 			aux_func_._spawn_bullet(agent, rogue_hooded_, false)
 			agent.input_cache.reset_shoot()
+		get_root().dispatch(&"shoot_to_falling")
