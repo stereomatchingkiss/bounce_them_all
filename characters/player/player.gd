@@ -10,8 +10,11 @@ class_name Player
 @onready var state_machine_utils_ := %state_machine_utils
 @onready var timer_disable_mask_: Timer = %timer_disable_mask
 
+var rotation_degree_target_y_ : float
+
 func _ready() -> void:
 	state_machine_utils_.init(self)
+	rotation_degree_target_y_ = rotation_degrees.y
 	
 func _not_collide_with_ground() -> bool:
 	return !ray_cast_3d_.is_colliding()
@@ -20,7 +23,7 @@ func _physics_process(delta: float) -> void:
 	input_cache.cache_input(state_machine_utils_.get_active_state(), \
 	_not_collide_with_ground(), delta)
 
-	adjust_player_rotation(input_cache.get_input_direction())
+	adjust_player_rotation(input_cache.get_input_direction(), delta)
 	align_character(delta)
 	
 	move_and_slide()
@@ -37,14 +40,16 @@ func get_body_name() -> StringName:
 	return &"player"
 
 func player_direction() -> int:
-	return rotation_degrees.y
+	return int(rotation_degrees.y)
 
-func adjust_player_rotation(input_dir : Vector2):
+func adjust_player_rotation(input_dir : Vector2, delta : float):
 	if input_dir != Vector2() and input_cache.get_x_direction_not_empty():
 		input_dir[1] = 0
-		rotation_degrees = Vector3(0, 90, 0)
-		rotation_degrees = Vector3.ZERO
-		rotation_degrees.y = -rad_to_deg(input_dir.angle()) + 90
+		
+		rotation_degrees.x = 0
+		rotation_degrees.z = 0
+		rotation_degree_target_y_ = -rad_to_deg(input_dir.angle()) + 90
+		rotation_degrees.y =  move_toward(rotation_degrees.y, rotation_degree_target_y_, delta * 800.0)
 
 func align_character(delta : float):
 	if not is_on_floor():
