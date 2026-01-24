@@ -49,7 +49,7 @@ func adjust_player_rotation(input_dir : Vector2, delta : float):
 		rotation_degrees.x = 0
 		rotation_degrees.z = 0
 		rotation_degree_target_y_ = -rad_to_deg(input_dir.angle()) + 90
-		rotation_degrees.y =  move_toward(rotation_degrees.y, rotation_degree_target_y_, delta * 800.0)
+	rotation_degrees.y =  move_toward(rotation_degrees.y, rotation_degree_target_y_, delta * 800.0)
 
 func align_character(delta : float):
 	if not is_on_floor():
