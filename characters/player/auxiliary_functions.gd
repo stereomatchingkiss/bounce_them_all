@@ -7,6 +7,8 @@ const fireball = preload("res://bullets/bullet_standard.tscn")
 const JUMP_VELOCITY = 4.5
 const SPEED = 3.0
 
+@onready var sound_manager_player_: SoundManagerPlayer = %SoundManagerPlayer
+
 func move_character(player : Player):
 	var direction : Vector3 = player.input_cache.get_norm_direction()
 	if direction:
@@ -26,7 +28,7 @@ func _spawn_bullet(agent : Player, rogue_hooded : RogueHooded, is_move_and_shoot
 		rogue_hooded.travel_to_move_and_shoot()
 	else:
 		rogue_hooded.travel_to_shoot()
-	SoundManager.play_shoot_standard_bullet()
+	sound_manager_player_.play_shoot_standard_bullet()
 	var fnode = fireball.instantiate()
 	agent.get_parent().add_child(fnode)	
 	print_debug("shoot state player direction = ", agent.player_direction())
