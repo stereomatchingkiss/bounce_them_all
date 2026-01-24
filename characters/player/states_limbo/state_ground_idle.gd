@@ -8,12 +8,10 @@ const move_path_ : String = "parameters/Move_Idle/blend_position"
 func _enter() -> void:
 	print_debug("enter state_ground_idle")
 	agent.input_cache.reset_input_direction()
-	rogue_hooded_.travel_to_idle_immediate()
+	rogue_hooded_.travel_to_idle()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _update(delta: float) -> void:
-	rogue_hooded_.travel_to_idle(delta)
-	
 	if agent.input_cache.get_jump():
 		print_debug("limbo : state_ground_idle to ground_to_jumping, ", Time.get_unix_time_from_system())
 		get_root().dispatch(&"ground_to_jumping")

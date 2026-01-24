@@ -13,6 +13,7 @@ extends Node
 @onready var state_ground_idle := %state_ground_idle
 
 @onready var state_shoot := %state_shoot
+@onready var state_walk_and_shoot: LimboState = %state_walk_and_shoot
 
 func _init_air_states():
 	limbo_hsm.add_transition(states_air, state_air_falling, &"air_to_falling")
@@ -47,6 +48,11 @@ func _init_ground_states():
 	limbo_hsm.add_transition(states_ground, state_ground_moving, &"ground_to_moving")
 	limbo_hsm.add_transition(state_ground_idle, state_ground_moving, &"ground_to_moving")	
 	limbo_hsm.add_transition(state_shoot, state_ground_moving, &"shoot_to_moving")
+	limbo_hsm.add_transition(state_ground_moving, state_walk_and_shoot, &"walk_and_shoot")
+	
+	limbo_hsm.add_transition(state_walk_and_shoot, state_ground_idle, &"walk_and_shoot_to_idle")
+	limbo_hsm.add_transition(state_walk_and_shoot, state_ground_jumping, &"walk_and_shoot_to_jump")
+	limbo_hsm.add_transition(state_walk_and_shoot, state_ground_moving, &"walk_and_shoot_to_moving")
 	
 func get_active_state() -> LimboState:
 	return limbo_hsm.get_active_state()

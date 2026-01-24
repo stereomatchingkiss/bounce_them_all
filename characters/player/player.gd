@@ -45,7 +45,7 @@ func adjust_player_rotation(input_dir : Vector2):
 		rotation_degrees = Vector3(0, 90, 0)
 		rotation_degrees = Vector3.ZERO
 		rotation_degrees.y = -rad_to_deg(input_dir.angle()) + 90
-		print_debug("avatar rotation degrees = ", rotation_degrees)
+
 func align_character(delta : float):
 	if not is_on_floor():
 		velocity += get_gravity() * delta
