@@ -1,7 +1,7 @@
 [gd_resource type="Theme" load_steps=7 format=3 uid="uid://di1ynnspp1355"]
 
-[ext_resource type="FontFile" uid="uid://3tugi486qlre" path="res://assets/fonts/NotoSerifSC-Regular.ttf" id="1_8p00x"]
-[ext_resource type="FontFile" uid="uid://c7j1f6rw6r36g" path="res://assets/fonts/MaShanZheng-Regular.ttf" id="2_av4ip"]
+[ext_resource type="FontFile" uid="uid://dhnte44cgbgpu" path="res://assets/fonts/NotoSerifSC-Regular.ttf" id="1_8p00x"]
+[ext_resource type="FontFile" uid="uid://dlks2f13qh7ux" path="res://assets/fonts/MaShanZheng-Regular.ttf" id="2_av4ip"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_av4ip"]
 

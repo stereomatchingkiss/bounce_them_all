@@ -1,7 +1,7 @@
 extends LimboState
 
 @export var animation_player_ : AnimationPlayer
-
+@export var sound_manager_enemy_ : SoundManagerEnemyBase
 @export var timer_get_hit_: Timer
 
 var velocity_cache_ : Vector3
@@ -27,7 +27,7 @@ func _get_hit() -> void:
 	if agent.get_get_hit():
 		print_debug("enemy hit")
 		animation_player_.play("HitReact")
-		SoundManager.play_hit_enemy_by_arrow()
+		sound_manager_enemy_.play_hit_enemy_by_arrow()
 		
 		if not bullet_damage_queue.is_empty():
 			agent.reduce_hp(bullet_damage_queue.back())

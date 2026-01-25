@@ -1,24 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bomgdx4r2x68e"]
+[gd_scene load_steps=3 format=3 uid="uid://bomgdx4r2x68e"]
 
 [ext_resource type="Script" uid="uid://cceb0rdpgw63" path="res://sounds/sound_manager.gd" id="1_f05am"]
-[ext_resource type="AudioStream" uid="uid://ucd66j7jmvsy" path="res://assets/sounds/sound_effects/hit_enemy.ogg" id="6_en5fs"]
 [ext_resource type="AudioStream" uid="uid://bxxp4c5qrhyxc" path="res://assets/sounds/musics/Creepy Comedy.mp3" id="7_x2es2"]
-[ext_resource type="AudioStream" uid="uid://f3lyd4ein2aa" path="res://assets/sounds/sound_effects/69_Enemy_death_01.ogg" id="7_yvcp5"]
 
 [node name="sound_manager" type="Node"]
 script = ExtResource("1_f05am")
-
-[node name="sound_effects" type="Node" parent="."]
-
-[node name="hit_enemy_by_arrow" type="AudioStreamPlayer" parent="sound_effects"]
-unique_name_in_owner = true
-stream = ExtResource("6_en5fs")
-bus = &"Sound"
-
-[node name="dead_enemy" type="AudioStreamPlayer" parent="sound_effects"]
-unique_name_in_owner = true
-stream = ExtResource("7_yvcp5")
-bus = &"Sound"
 
 [node name="musics" type="Node" parent="."]
 

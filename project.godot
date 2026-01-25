@@ -8,6 +8,10 @@
 
 config_version=5
 
+[accessibility]
+
+general/quality/msaa_3d=0
+
 [application]
 
 config/name="bounce_them_all"
@@ -64,3 +68,7 @@ down={
 3d_physics/layer_8="bullet_ball"
 3d_physics/layer_9="bullet_enemy"
 3d_physics/layer_10="wall"
+
+[rendering]
+
+anti_aliasing/quality/msaa_3d=1

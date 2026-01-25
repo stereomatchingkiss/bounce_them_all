@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://do7mbcm387dxb"]
+[gd_scene load_steps=14 format=4 uid="uid://do7mbcm387dxb"]
 
 [ext_resource type="Script" uid="uid://cd0jflyqbbdig" path="res://stages/wilds/1_0/main.gd" id="1_ar8pa"]
 [ext_resource type="PackedScene" uid="uid://b0tmdnp32vajq" path="res://characters/player/player.tscn" id="1_mp1y8"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://d025lvnmpfbjq" path="res://assets/environment_models/kaykit/blockBits/gltf/wood.gltf" id="4_berts"]
 [ext_resource type="PackedScene" uid="uid://pi8svw15cbpo" path="res://assets/environment_models/kaykit/blockBits/gltf/tree.gltf" id="5_1824u"]
 [ext_resource type="PackedScene" uid="uid://c0d7n0ak5ql7t" path="res://assets/environment_models/kaykit/blockBits/gltf/decorative_block_blue.gltf" id="6_1824u"]
+[ext_resource type="PackedScene" uid="uid://4a51qwapbxxl" path="res://characters/enemies/alien/alien.tscn" id="8_i4go4"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ar8pa"]
 
@@ -112,3 +113,7 @@ collision_mask = 129
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CSGBox3D/CSGBakedMeshInstance3D/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_i4go4")
+
+[node name="Alien" parent="." instance=ExtResource("8_i4go4")]
+transform = Transform3D(-8.742278e-08, 0, 2, 0, 2, 0, -2, 0, -8.742278e-08, 7.3029647, 0, 1.252)
+move_velocity = Vector3(2, 0, 0)

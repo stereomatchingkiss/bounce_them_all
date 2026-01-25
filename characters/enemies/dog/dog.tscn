@@ -1,17 +1,18 @@
-[gd_scene load_steps=29 format=4 uid="uid://pwu6jjxts73x"]
+[gd_scene load_steps=30 format=4 uid="uid://pwu6jjxts73x"]
 
-[ext_resource type="Texture2D" uid="uid://cmd10k6r5u700" path="res://assets/characters/enemies/universal_monster_texture.png" id="1_be8m2"]
-[ext_resource type="Script" uid="uid://djty4j0mnwdlj" path="res://characters/enemies/dog/dog.gd" id="1_hguxn"]
+[ext_resource type="Texture2D" uid="uid://btrq16dywp31j" path="res://assets/characters/enemies/universal_monster_texture.png" id="1_be8m2"]
+[ext_resource type="Script" uid="uid://ck2jmgkap76h4" path="res://characters/enemies/dog/dog.gd" id="1_hguxn"]
 [ext_resource type="PackedScene" uid="uid://s2tdallyq144" path="res://bullets/bullet_ball.tscn" id="3_j5fq5"]
-[ext_resource type="Script" uid="uid://cj30npa05bj7b" path="res://characters/enemies/dog/states_limbo/state_machine_utils.gd" id="4_km3m6"]
-[ext_resource type="Script" uid="uid://bll71lm1fe1mm" path="res://characters/enemies/states_limbo/state_falling.gd" id="4_qxks3"]
-[ext_resource type="Script" uid="uid://bq3olyprlk7c0" path="res://characters/enemies/dog/states_limbo/state_moving.gd" id="5_hekeo"]
-[ext_resource type="Script" uid="uid://cot53qc47glgk" path="res://characters/enemies/states_limbo/state_turn_around.gd" id="6_ifl3j"]
-[ext_resource type="Script" uid="uid://diklug68gquux" path="res://characters/enemies/states_limbo/state_get_hit.gd" id="7_hekeo"]
-[ext_resource type="Script" uid="uid://di68oqpy7ctj0" path="res://characters/enemies/bullet_ball_utils.gd" id="7_nhgpr"]
-[ext_resource type="Script" uid="uid://biglfei6y0lap" path="res://characters/enemies/states_limbo/state_to_ball.gd" id="8_6txso"]
-[ext_resource type="Script" uid="uid://d2pjomwa5wjl2" path="res://characters/enemies/states_limbo/state_dead.gd" id="9_63k0x"]
-[ext_resource type="Script" uid="uid://cw25bl7g1b4tx" path="res://characters/enemies/states_limbo/state_shoot.gd" id="10_6txso"]
+[ext_resource type="Script" uid="uid://b0w1q5vi43aro" path="res://characters/enemies/dog/states_limbo/state_machine_utils.gd" id="4_km3m6"]
+[ext_resource type="Script" uid="uid://d077qyxcovx0t" path="res://characters/enemies/states_limbo/state_falling.gd" id="4_qxks3"]
+[ext_resource type="Script" uid="uid://bbkhbl1fni5vm" path="res://characters/enemies/dog/states_limbo/state_moving.gd" id="5_hekeo"]
+[ext_resource type="Script" uid="uid://blclxn0tdrghh" path="res://characters/enemies/states_limbo/state_turn_around.gd" id="6_ifl3j"]
+[ext_resource type="Script" uid="uid://brejfhhjoassx" path="res://characters/enemies/states_limbo/state_get_hit.gd" id="7_hekeo"]
+[ext_resource type="Script" uid="uid://c7ns0mpahbqgu" path="res://characters/enemies/bullet_ball_utils.gd" id="7_nhgpr"]
+[ext_resource type="Script" uid="uid://bxywa2qcoilqv" path="res://characters/enemies/states_limbo/state_to_ball.gd" id="8_6txso"]
+[ext_resource type="Script" uid="uid://bhq1wqefns4d1" path="res://characters/enemies/states_limbo/state_dead.gd" id="9_63k0x"]
+[ext_resource type="Script" uid="uid://cpxqhmguw8x77" path="res://characters/enemies/states_limbo/state_shoot.gd" id="10_6txso"]
+[ext_resource type="PackedScene" uid="uid://c6fybarcwkd2v" path="res://characters/enemies/sound_manager_enemy_base.tscn" id="12_8i5om"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wgq2u"]
 resource_name = "Atlas"
@@ -494,7 +495,7 @@ radius = 0.334473
 
 [node name="dog" type="CharacterBody3D" node_paths=PackedStringArray("limbo_hsm_", "state_machine_utils_", "state_get_hit_", "area_attack_player_", "bullet_ball_", "bullet_ball_utils_")]
 collision_layer = 8
-collision_mask = 34
+collision_mask = 546
 axis_lock_linear_z = true
 script = ExtResource("1_hguxn")
 move_velocity = Vector3(-1, 0, 0)
@@ -587,18 +588,20 @@ ray_cast_floor_detector_ = NodePath("../../RayCastFloorDetector")
 script = ExtResource("6_ifl3j")
 ray_cast_floor_detector_ = NodePath("../../RayCastFloorDetector")
 
-[node name="state_get_hit" type="LimboState" parent="LimboHSM" node_paths=PackedStringArray("animation_player_", "timer_get_hit_")]
+[node name="state_get_hit" type="LimboState" parent="LimboHSM" node_paths=PackedStringArray("animation_player_", "sound_manager_enemy_", "timer_get_hit_")]
 script = ExtResource("7_hekeo")
 animation_player_ = NodePath("../../AnimationPlayer")
+sound_manager_enemy_ = NodePath("../../SoundManagerEnemyBase")
 timer_get_hit_ = NodePath("../../timers/timer_get_hit")
 
 [node name="state_to_ball" type="LimboState" parent="LimboHSM" node_paths=PackedStringArray("timer_reover_to_enemy_")]
 script = ExtResource("8_6txso")
 timer_reover_to_enemy_ = NodePath("../../timers/timer_reover_to_enemy")
 
-[node name="state_dead" type="LimboState" parent="LimboHSM" node_paths=PackedStringArray("animation_player_")]
+[node name="state_dead" type="LimboState" parent="LimboHSM" node_paths=PackedStringArray("animation_player_", "sound_manager_enemy_")]
 script = ExtResource("9_63k0x")
 animation_player_ = NodePath("../../AnimationPlayer")
+sound_manager_enemy_ = NodePath("../../SoundManagerEnemyBase")
 
 [node name="state_shoot" type="LimboState" parent="LimboHSM" node_paths=PackedStringArray("animation_player_")]
 script = ExtResource("10_6txso")
@@ -620,6 +623,9 @@ bullet_ball_ = NodePath("../bullet_ball")
 character_armature_ = NodePath("../CharacterArmature")
 enemy_ = NodePath("..")
 limbo_hsm_ = NodePath("../LimboHSM")
+
+[node name="SoundManagerEnemyBase" parent="." instance=ExtResource("12_8i5om")]
+unique_name_in_owner = true
 
 [node name="state_machine_utils" type="Node" parent="."]
 unique_name_in_owner = true
