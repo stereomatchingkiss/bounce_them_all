@@ -11,7 +11,7 @@
 [ext_resource type="Script" uid="uid://bhq1wqefns4d1" path="res://characters/enemies/states_limbo/state_dead.gd" id="9_71p70"]
 [ext_resource type="PackedScene" uid="uid://s2tdallyq144" path="res://bullets/bullet_ball.tscn" id="9_wo6dy"]
 [ext_resource type="Script" uid="uid://c7ns0mpahbqgu" path="res://characters/enemies/bullet_ball_utils.gd" id="10_dqr31"]
-[ext_resource type="PackedScene" uid="uid://c6fybarcwkd2v" path="res://characters/enemies/sound_manager_enemy_base.tscn" id="12_xvptw"]
+[ext_resource type="PackedScene" uid="uid://c6fybarcwkd2v" path="res://sounds/sound_manager_enemy_base.tscn" id="12_xvptw"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dqr31"]
 albedo_texture = ExtResource("2_71p70")

@@ -12,7 +12,7 @@
 [ext_resource type="Script" uid="uid://bxywa2qcoilqv" path="res://characters/enemies/states_limbo/state_to_ball.gd" id="8_6txso"]
 [ext_resource type="Script" uid="uid://bhq1wqefns4d1" path="res://characters/enemies/states_limbo/state_dead.gd" id="9_63k0x"]
 [ext_resource type="Script" uid="uid://cpxqhmguw8x77" path="res://characters/enemies/states_limbo/state_shoot.gd" id="10_6txso"]
-[ext_resource type="PackedScene" uid="uid://c6fybarcwkd2v" path="res://characters/enemies/sound_manager_enemy_base.tscn" id="12_8i5om"]
+[ext_resource type="PackedScene" uid="uid://c6fybarcwkd2v" path="res://sounds/sound_manager_enemy_base.tscn" id="12_8i5om"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wgq2u"]
 resource_name = "Atlas"
