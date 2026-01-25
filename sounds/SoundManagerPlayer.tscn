@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://m376qssyoy7d"]
+
+[ext_resource type="Script" uid="uid://cuxd4uiy5li6n" path="res://sounds/sound_manager_player.gd" id="1_omtuq"]
+[ext_resource type="AudioStream" uid="uid://pmpu4t4kbdxi" path="res://assets/sounds/sound_effects/Jump.ogg" id="2_jf7pq"]
+[ext_resource type="AudioStream" uid="uid://na2bw8iwfgvt" path="res://assets/sounds/sound_effects/Gun.ogg" id="3_ungd3"]
+[ext_resource type="AudioStream" uid="uid://ymqncjc3dsut" path="res://assets/sounds/sound_effects/13_human_jump_land_1.ogg" id="4_dvgku"]
+[ext_resource type="AudioStream" uid="uid://ucd66j7jmvsy" path="res://assets/sounds/sound_effects/hit_enemy.ogg" id="6_b4ikf"]
+
+[node name="SoundManagerPlayer" type="Node"]
+script = ExtResource("1_omtuq")
+
+[node name="sound_effects" type="Node" parent="."]
+
+[node name="jump" type="AudioStreamPlayer" parent="sound_effects"]
+unique_name_in_owner = true
+stream = ExtResource("2_jf7pq")
+bus = &"Sound"
+
+[node name="shoot_standard_bullet" type="AudioStreamPlayer" parent="sound_effects"]
+unique_name_in_owner = true
+stream = ExtResource("3_ungd3")
+bus = &"Sound"
+
+[node name="land" type="AudioStreamPlayer" parent="sound_effects"]
+unique_name_in_owner = true
+stream = ExtResource("4_dvgku")
+bus = &"Sound"
+
+[node name="hit_enemy_by_arrow" type="AudioStreamPlayer" parent="sound_effects"]
+unique_name_in_owner = true
+stream = ExtResource("6_b4ikf")
+bus = &"Sound"

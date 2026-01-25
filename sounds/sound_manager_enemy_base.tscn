@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://c6fybarcwkd2v"]
+
+[ext_resource type="Script" uid="uid://c24b7754ya1ya" path="res://sounds/sound_manager_enemy_base.gd" id="1_73lxw"]
+[ext_resource type="AudioStream" uid="uid://ucd66j7jmvsy" path="res://assets/sounds/sound_effects/hit_enemy.ogg" id="2_h2jtv"]
+[ext_resource type="AudioStream" uid="uid://f3lyd4ein2aa" path="res://assets/sounds/sound_effects/69_Enemy_death_01.ogg" id="3_j8ypl"]
+[ext_resource type="AudioStream" uid="uid://bmdluxbrne33p" path="res://assets/sounds/sound_effects/14_human_death_spin.ogg" id="4_h2jtv"]
+
+[node name="SoundManagerEnemyBase" type="Node"]
+script = ExtResource("1_73lxw")
+
+[node name="sound_effects" type="Node" parent="."]
+
+[node name="hit_enemy_by_arrow" type="AudioStreamPlayer" parent="sound_effects"]
+unique_name_in_owner = true
+stream = ExtResource("2_h2jtv")
+bus = &"Sound"
+
+[node name="dead_enemy" type="AudioStreamPlayer" parent="sound_effects"]
+unique_name_in_owner = true
+stream = ExtResource("3_j8ypl")
+bus = &"Sound"
+
+[node name="dead_player" type="AudioStreamPlayer" parent="sound_effects"]
+unique_name_in_owner = true
+stream = ExtResource("4_h2jtv")
+bus = &"Sound"
