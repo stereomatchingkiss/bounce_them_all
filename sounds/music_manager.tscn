@@ -1,9 +1,9 @@
 [gd_scene load_steps=3 format=3 uid="uid://bomgdx4r2x68e"]
 
-[ext_resource type="Script" uid="uid://cceb0rdpgw63" path="res://sounds/sound_manager.gd" id="1_f05am"]
+[ext_resource type="Script" uid="uid://cceb0rdpgw63" path="res://sounds/music_manager.gd" id="1_f05am"]
 [ext_resource type="AudioStream" uid="uid://bxxp4c5qrhyxc" path="res://assets/sounds/musics/Creepy Comedy.mp3" id="7_x2es2"]
 
-[node name="sound_manager" type="Node"]
+[node name="MusicManager" type="Node"]
 script = ExtResource("1_f05am")
 
 [node name="musics" type="Node" parent="."]

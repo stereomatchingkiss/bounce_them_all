@@ -25,7 +25,3 @@ var language := Language.English
 var full_screen := true
 var msaa := MSAA.M2
 var resolution := Resolution.R1920x1080
-
-# Audio
-var music_volume := 1.0
-var sound_volume := 1.0

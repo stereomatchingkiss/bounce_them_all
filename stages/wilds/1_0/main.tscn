@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=4 uid="uid://do7mbcm387dxb"]
+[gd_scene load_steps=15 format=4 uid="uid://do7mbcm387dxb"]
 
 [ext_resource type="Script" uid="uid://cd0jflyqbbdig" path="res://stages/wilds/1_0/main.gd" id="1_ar8pa"]
 [ext_resource type="PackedScene" uid="uid://b0tmdnp32vajq" path="res://characters/player/player.tscn" id="1_mp1y8"]
+[ext_resource type="PackedScene" uid="uid://bomgdx4r2x68e" path="res://sounds/music_manager.tscn" id="2_5403i"]
 [ext_resource type="MeshLibrary" uid="uid://cnp3gbe13jy3k" path="res://assets/gridmap/kay_kit_block_bits.tres" id="2_pnnvd"]
 [ext_resource type="VoxelGIData" uid="uid://cm1dlb5mewoce" path="res://stages/wilds/1_0/voxel_main.tres" id="3_wvspq"]
 [ext_resource type="PackedScene" uid="uid://d025lvnmpfbjq" path="res://assets/environment_models/kaykit/blockBits/gltf/wood.gltf" id="4_berts"]
@@ -41,8 +42,10 @@ points = PackedVector3Array(-20, -0.5, -2.5, -20, 0.5, -2.5, 20, -0.5, -2.5, -20
 [node name="Main" type="Node3D"]
 script = ExtResource("1_ar8pa")
 
+[node name="MusicManager" parent="." instance=ExtResource("2_5403i")]
+
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.8660254, -0.43301278, 0.25000003, 0.13120413, 0.28567234, 0.94930327, -0.4824786, 0.8549218, -0.1905864, 5.364586, 7.77067, 3.1267986)
+transform = Transform3D(-0.8121165, 0.5802505, 0.061452106, 0.109128036, 0.047582213, 0.9928884, 0.57319987, 0.81304693, -0.10196385, 5.364586, 7.77067, 3.1267986)
 shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -50,10 +53,6 @@ environment = SubResource("Environment_21aex")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.99853104, 0.054183383, 0, -0.054183383, 0.99853104, 5.324509, 1.5183175, 6.4730663)
-
-[node name="player" parent="." instance=ExtResource("1_mp1y8")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.7730694, -1.9785156, 1.2518426)
-collision_mask = 574
 
 [node name="VoxelGI" type="VoxelGI" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.988224, 4.700924, -10.031824)
@@ -114,6 +113,12 @@ collision_mask = 129
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CSGBox3D/CSGBakedMeshInstance3D/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_i4go4")
 
-[node name="Alien" parent="." instance=ExtResource("8_i4go4")]
+[node name="player" parent="." instance=ExtResource("1_mp1y8")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.7730694, -1.9785156, 1.2518426)
+collision_mask = 574
+
+[node name="Enemies" type="Node3D" parent="."]
+
+[node name="Alien" parent="Enemies" instance=ExtResource("8_i4go4")]
 transform = Transform3D(-8.742278e-08, 0, 2, 0, 2, 0, -2, 0, -8.742278e-08, 7.3029647, 0, 1.252)
 move_velocity = Vector3(2, 0, 0)
