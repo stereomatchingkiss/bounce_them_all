@@ -54,31 +54,37 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 selected = 0
-item_count = 2
-popup/item_0/text = "1920x1080"
-popup/item_0/id = 0
-popup/item_1/text = "1152x648"
-popup/item_1/id = 1
+item_count = 3
+popup/item_0/text = "1152x648"
+popup/item_0/id = 1
+popup/item_1/text = "1280x720"
+popup/item_1/id = 2
+popup/item_2/text = "1920x1080"
+popup/item_2/id = 0
 
-[node name="LabelFullScreen" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+[node name="LabelWindowMode" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 6
 theme_type_variation = &"LabelNormal"
-text = "Full Screen"
+text = "Window Mode"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="OptionFullScreen" type="OptionButton" parent="MarginContainer/VBoxContainer/GridContainer"]
+[node name="OptionWindowMode" type="OptionButton" parent="MarginContainer/VBoxContainer/GridContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 selected = 0
-item_count = 2
-popup/item_0/text = "On"
+item_count = 4
+popup/item_0/text = "FullScreen"
 popup/item_0/id = 0
-popup/item_1/text = "Off"
+popup/item_1/text = "Window"
 popup/item_1/id = 1
+popup/item_2/text = "Borderless Full Screen"
+popup/item_2/id = 3
+popup/item_3/text = "Borderless Window"
+popup/item_3/id = 2
 
 [node name="LabelMSAA" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
 unique_name_in_owner = true
@@ -115,6 +121,6 @@ layout_mode = 2
 text = "Back"
 
 [connection signal="item_selected" from="MarginContainer/VBoxContainer/GridContainer/OptionResolution" to="." method="_on_option_resolution_item_selected"]
-[connection signal="item_selected" from="MarginContainer/VBoxContainer/GridContainer/OptionFullScreen" to="." method="_on_option_full_screen_item_selected"]
+[connection signal="item_selected" from="MarginContainer/VBoxContainer/GridContainer/OptionWindowMode" to="." method="_on_option_window_mode_item_selected"]
 [connection signal="item_selected" from="MarginContainer/VBoxContainer/GridContainer/OptionMSAA" to="." method="_on_option_msaa_item_selected"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonBackToOptions" to="." method="_on_button_back_to_options_pressed"]

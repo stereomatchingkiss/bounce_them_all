@@ -8,6 +8,7 @@ enum Language{
 
 enum Resolution{
 	R1152x648,
+	R1280x720,
 	R1920x1080
 }
 
@@ -18,10 +19,17 @@ enum MSAA{
 	M8
 }
 
+enum WindowMode{
+	FullScreen,
+	Windows,
+	BorderlessFullScreen,
+	BorderlessWindow
+}
+
 # Game
 var language := Language.English
 
 # Video
-var full_screen := true
 var msaa := MSAA.M2
 var resolution := Resolution.R1920x1080
+var window_mode := WindowMode.Windows

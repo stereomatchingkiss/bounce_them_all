@@ -10,4 +10,4 @@ func _on_button_back_to_options_pressed() -> void:
 
 func _on_option_language_item_selected(index: int) -> void:
 	print_debug("language index = ", index)
-	OptionsStorageGlobal.language = OptionsStorage.Language.keys()[index]
+	OptionsStorageGlobal.language = index as OptionsStorage.Language
