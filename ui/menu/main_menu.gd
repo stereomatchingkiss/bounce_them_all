@@ -1,12 +1,12 @@
 extends Control
 
-@onready var button_end_: Button = %button_end
-@onready var button_game_start_: Button = %button_game_start
-@onready var button_options_: Button = %button_options
+@onready var button_end_: Button = %ButtonEnd
+@onready var button_game_start_: Button = %ButtonGameStart
+@onready var button_options_: Button = %ButtonOptions
 
 @onready var buttons_array_ : Array[Button] = [button_game_start_, button_options_, button_end_]
 
-@onready var menu_utils_: Node = %menu_utils
+@onready var menu_utils_: Node = %MenuUtils
 
 enum ButtonName {
 	GAME_START,
@@ -45,7 +45,7 @@ func _process_key_up() ->void:
 	menu_utils_.navigate_buttons_up_or_down(buttons_array_, menu_utils_.NavigateDirection.UP)
 
 func _on_button_game_start_pressed() -> void:
-	get_tree().change_scene_to_file("res://stages/arena/1_0/graveyard_1_0.tscn")
+	get_tree().change_scene_to_file("res://stages/wilds/1_0/main.tscn")
 
 func _on_button_options_pressed() -> void:
 	get_tree().change_scene_to_file("res://ui/menu/options_menu.tscn")
