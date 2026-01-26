@@ -114,4 +114,7 @@ custom_minimum_size = Vector2(500, 50)
 layout_mode = 2
 text = "Back"
 
+[connection signal="item_selected" from="MarginContainer/VBoxContainer/GridContainer/OptionResolution" to="." method="_on_option_resolution_item_selected"]
+[connection signal="item_selected" from="MarginContainer/VBoxContainer/GridContainer/OptionFullScreen" to="." method="_on_option_full_screen_item_selected"]
+[connection signal="item_selected" from="MarginContainer/VBoxContainer/GridContainer/OptionMSAA" to="." method="_on_option_msaa_item_selected"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonBackToOptions" to="." method="_on_button_back_to_options_pressed"]

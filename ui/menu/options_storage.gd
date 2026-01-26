@@ -1,14 +1,14 @@
-extends Resource
+extends Node
 class_name OptionsStorage
 
 enum Language{
-	English,
-	Chinese
+	Chinese,
+	English
 }
 
 enum Resolution{
-	R1920x1080,
-	R1152x648
+	R1152x648,
+	R1920x1080
 }
 
 enum MSAA{
