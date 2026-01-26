@@ -1,10 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://coqfpluxwiclo"]
 
 [ext_resource type="Theme" uid="uid://b1woour2wjax0" path="res://assets/themes/theme_options.tres" id="1_dgvto"]
-[ext_resource type="Script" uid="uid://dilunky7p71fm" path="res://ui/menu/options_menu.gd" id="2_krdqx"]
-[ext_resource type="Script" uid="uid://bmwueb2ifttal" path="res://ui/menu/menu_utils.gd" id="3_dgvto"]
+[ext_resource type="Script" uid="uid://dhrhyufcg066p" path="res://ui/menu/options_menu.gd" id="2_krdqx"]
+[ext_resource type="Script" uid="uid://5vs43gwj23we" path="res://ui/menu/menu_utils.gd" id="3_dgvto"]
 
-[node name="options_menu" type="Control"]
+[node name="OptionsMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -23,7 +23,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = -20
 
-[node name="label_title" type="Label" parent="VBoxContainer"]
+[node name="LabelTitle" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 text = "Options"
 horizontal_alignment = 1
@@ -32,7 +32,7 @@ vertical_alignment = 1
 [node name="MarginContainerGame" type="MarginContainer" parent="VBoxContainer"]
 layout_mode = 2
 
-[node name="button_game" type="Button" parent="VBoxContainer/MarginContainerGame"]
+[node name="ButtonGame" type="Button" parent="VBoxContainer/MarginContainerGame"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(500, 50)
 layout_mode = 2
@@ -41,7 +41,7 @@ text = "Game"
 [node name="MarginContainerAudio" type="MarginContainer" parent="VBoxContainer"]
 layout_mode = 2
 
-[node name="button_audio" type="Button" parent="VBoxContainer/MarginContainerAudio"]
+[node name="ButtonAudio" type="Button" parent="VBoxContainer/MarginContainerAudio"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(500, 50)
 layout_mode = 2
@@ -50,7 +50,7 @@ text = "Audio"
 [node name="MarginContainerVideo" type="MarginContainer" parent="VBoxContainer"]
 layout_mode = 2
 
-[node name="button_video" type="Button" parent="VBoxContainer/MarginContainerVideo"]
+[node name="ButtonVideo" type="Button" parent="VBoxContainer/MarginContainerVideo"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(500, 50)
 layout_mode = 2
@@ -59,7 +59,7 @@ text = "Video"
 [node name="MarginContainerKeyBoard" type="MarginContainer" parent="VBoxContainer"]
 layout_mode = 2
 
-[node name="button_keyboard" type="Button" parent="VBoxContainer/MarginContainerKeyBoard"]
+[node name="ButtonKeyboard" type="Button" parent="VBoxContainer/MarginContainerKeyBoard"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(500, 50)
 layout_mode = 2
@@ -72,23 +72,23 @@ size_flags_vertical = 3
 [node name="MarginContainerBack" type="MarginContainer" parent="VBoxContainer"]
 layout_mode = 2
 
-[node name="button_back_to_main" type="Button" parent="VBoxContainer/MarginContainerBack"]
+[node name="ButtonBackToMain" type="Button" parent="VBoxContainer/MarginContainerBack"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(500, 50)
 layout_mode = 2
 text = "Back"
 
-[node name="menu_utils" type="Node" parent="."]
+[node name="MenuUtils" type="Node" parent="."]
 unique_name_in_owner = true
 script = ExtResource("3_dgvto")
 
-[connection signal="mouse_entered" from="VBoxContainer/MarginContainerGame/button_game" to="." method="_on_button_game_mouse_entered"]
-[connection signal="pressed" from="VBoxContainer/MarginContainerGame/button_game" to="." method="_on_button_game_pressed"]
-[connection signal="mouse_entered" from="VBoxContainer/MarginContainerAudio/button_audio" to="." method="_on_button_audio_mouse_entered"]
-[connection signal="pressed" from="VBoxContainer/MarginContainerAudio/button_audio" to="." method="_on_button_audio_pressed"]
-[connection signal="mouse_entered" from="VBoxContainer/MarginContainerVideo/button_video" to="." method="_on_button_video_mouse_entered"]
-[connection signal="pressed" from="VBoxContainer/MarginContainerVideo/button_video" to="." method="_on_button_video_pressed"]
-[connection signal="mouse_entered" from="VBoxContainer/MarginContainerKeyBoard/button_keyboard" to="." method="_on_button_keyboard_mouse_entered"]
-[connection signal="pressed" from="VBoxContainer/MarginContainerKeyBoard/button_keyboard" to="." method="_on_button_keyboard_pressed"]
-[connection signal="mouse_entered" from="VBoxContainer/MarginContainerBack/button_back_to_main" to="." method="_on_button_back_to_main_mouse_entered"]
-[connection signal="pressed" from="VBoxContainer/MarginContainerBack/button_back_to_main" to="." method="_on_button_back_to_main_pressed"]
+[connection signal="mouse_entered" from="VBoxContainer/MarginContainerGame/ButtonGame" to="." method="_on_button_game_mouse_entered"]
+[connection signal="pressed" from="VBoxContainer/MarginContainerGame/ButtonGame" to="." method="_on_button_game_pressed"]
+[connection signal="mouse_entered" from="VBoxContainer/MarginContainerAudio/ButtonAudio" to="." method="_on_button_audio_mouse_entered"]
+[connection signal="pressed" from="VBoxContainer/MarginContainerAudio/ButtonAudio" to="." method="_on_button_audio_pressed"]
+[connection signal="mouse_entered" from="VBoxContainer/MarginContainerVideo/ButtonVideo" to="." method="_on_button_video_mouse_entered"]
+[connection signal="pressed" from="VBoxContainer/MarginContainerVideo/ButtonVideo" to="." method="_on_button_video_pressed"]
+[connection signal="mouse_entered" from="VBoxContainer/MarginContainerKeyBoard/ButtonKeyboard" to="." method="_on_button_keyboard_mouse_entered"]
+[connection signal="pressed" from="VBoxContainer/MarginContainerKeyBoard/ButtonKeyboard" to="." method="_on_button_keyboard_pressed"]
+[connection signal="mouse_entered" from="VBoxContainer/MarginContainerBack/ButtonBackToMain" to="." method="_on_button_back_to_main_mouse_entered"]
+[connection signal="pressed" from="VBoxContainer/MarginContainerBack/ButtonBackToMain" to="." method="_on_button_back_to_main_pressed"]

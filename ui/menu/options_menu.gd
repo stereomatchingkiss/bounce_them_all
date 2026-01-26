@@ -1,10 +1,10 @@
 extends Control
 
-@onready var button_game_: Button = %button_game
-@onready var button_audio_: Button = %button_audio
-@onready var button_video_: Button = %button_video
-@onready var button_keyboard_: Button = %button_keyboard
-@onready var button_back_to_main_: Button = %button_back_to_main
+@onready var button_game_: Button = %ButtonGame
+@onready var button_audio_: Button = %ButtonAudio
+@onready var button_video_: Button = %ButtonVideo
+@onready var button_keyboard_: Button = %ButtonKeyboard
+@onready var button_back_to_main_: Button = %ButtonBackToMain
 
 @onready var buttons_array_ : Array[Button] = [button_game_, button_audio_, 
 button_video_, button_keyboard_, button_back_to_main_]
@@ -16,7 +16,7 @@ button_video_, button_keyboard_, button_back_to_main_]
 	_on_button_back_to_main_pressed
 ]
 
-@onready var menu_utils_: Node = %menu_utils
+@onready var menu_utils_: MenuUtils = %MenuUtils
 
 enum ButtonName {
 	GAME,
