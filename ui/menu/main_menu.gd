@@ -6,7 +6,7 @@ extends Control
 
 @onready var buttons_array_ : Array[Button] = [button_game_start_, button_options_, button_end_]
 
-@onready var menu_utils_: Node = %MenuUtils
+@onready var menu_utils_: MenuUtils = %MenuUtils
 
 enum ButtonName {
 	GAME_START,

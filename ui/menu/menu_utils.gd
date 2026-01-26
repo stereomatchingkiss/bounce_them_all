@@ -1,4 +1,5 @@
 extends Node
+class_name MenuUtils
 
 @onready var button_hover_ : int = 0
 
