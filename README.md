@@ -27,6 +27,11 @@ A collection of independent game projects for practicing game development with G
 - [Ma Shan Zheng](https://fonts.google.com/specimen/Ma+Shan+Zheng?lang=zh_Hans)
 - [Noto Serif Simplified Chinese](https://fonts.google.com/noto/specimen/Noto+Serif+SC?lang=zh_Hans)
 
+## UI
+
+- [Kenny Game Icon](https://kenney.nl/assets/game-icons)
+- [Kenny Input Prompts](https://kenney.nl/assets/input-prompts)
+
 # Todo
 
 - Better background
