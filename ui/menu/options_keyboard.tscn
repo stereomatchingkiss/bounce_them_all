@@ -1,14 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://b5hwyp7pgmxp2"]
+[gd_scene load_steps=4 format=3 uid="uid://b5hwyp7pgmxp2"]
 
 [ext_resource type="Theme" uid="uid://b1woour2wjax0" path="res://assets/themes/theme_options.tres" id="1_eo0r8"]
-[ext_resource type="Texture2D" uid="uid://h1ymwuarh11r" path="res://assets/ui/input_prompts/keyboard_and_mouse/Vector/keyboard_arrows_up.svg" id="1_jeu71"]
-[ext_resource type="Texture2D" uid="uid://bjs3wpff4eju3" path="res://assets/ui/input_prompts/keyboard_and_mouse/Vector/keyboard_arrows_down.svg" id="2_eo0r8"]
-[ext_resource type="Script" uid="uid://d34kmcphvgwbe" path="res://ui/menu/options_keyboard.gd" id="2_qf8xt"]
-[ext_resource type="Texture2D" uid="uid://dcg2m3f6sbkpn" path="res://assets/ui/input_prompts/keyboard_and_mouse/Vector/keyboard_arrows_right.svg" id="3_qf8xt"]
-[ext_resource type="Texture2D" uid="uid://d365fidmj2gxm" path="res://assets/ui/input_prompts/keyboard_and_mouse/Vector/keyboard_z.svg" id="4_tul3x"]
-[ext_resource type="Texture2D" uid="uid://chynlo2op52pd" path="res://assets/ui/input_prompts/keyboard_and_mouse/Vector/keyboard_x.svg" id="5_t5m2u"]
+[ext_resource type="Script" uid="uid://dci6gtjaj6s3f" path="res://ui/menu/options_keyboard.gd" id="2_qf8xt"]
+[ext_resource type="PackedScene" uid="uid://bgwprf7vqd7ft" path="res://ui/menu/input_remap_button.tscn" id="3_hroih"]
 
-[node name="options_keyboard" type="Control"]
+[node name="OptionsKeyBoard" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -34,7 +30,7 @@ theme_override_constants/margin_bottom = 20
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 
-[node name="label_title" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="LabelTitle" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Keyboard"
 horizontal_alignment = 1
@@ -47,80 +43,57 @@ size_flags_vertical = 3
 theme_override_constants/h_separation = 8
 columns = 4
 
-[node name="label_up" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
-layout_mode = 2
-theme_type_variation = &"LabelNormal"
-text = "Up"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="texture_up" type="TextureRect" parent="MarginContainer/VBoxContainer/GridContainer"]
-layout_mode = 2
-texture = ExtResource("1_jeu71")
-
-[node name="label_down" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
-layout_mode = 2
-theme_type_variation = &"LabelNormal"
-text = "Down"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="texture_down" type="TextureRect" parent="MarginContainer/VBoxContainer/GridContainer"]
-layout_mode = 2
-texture = ExtResource("2_eo0r8")
-
-[node name="label_left" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+[node name="LabelLeft" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
 theme_type_variation = &"LabelNormal"
 text = "Left"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="texture_left" type="TextureRect" parent="MarginContainer/VBoxContainer/GridContainer"]
+[node name="InputRemapButtonLeft" parent="MarginContainer/VBoxContainer/GridContainer" instance=ExtResource("3_hroih")]
 layout_mode = 2
-texture = ExtResource("2_eo0r8")
+action = "left"
 
-[node name="label_right" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+[node name="LabelRight" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
 theme_type_variation = &"LabelNormal"
 text = "Right"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="texture_right" type="TextureRect" parent="MarginContainer/VBoxContainer/GridContainer"]
+[node name="InputRemapButtonRight" parent="MarginContainer/VBoxContainer/GridContainer" instance=ExtResource("3_hroih")]
 layout_mode = 2
-texture = ExtResource("3_qf8xt")
+action = "right"
 
-[node name="label_jump" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+[node name="LabelJump" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
 theme_type_variation = &"LabelNormal"
 text = "Jump"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="texture_jump" type="TextureRect" parent="MarginContainer/VBoxContainer/GridContainer"]
+[node name="InputRemapButtonJump" parent="MarginContainer/VBoxContainer/GridContainer" instance=ExtResource("3_hroih")]
 layout_mode = 2
-texture = ExtResource("4_tul3x")
 
-[node name="label_attack" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+[node name="LabelShoot" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
 theme_type_variation = &"LabelNormal"
 text = "Attack"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="texture_attack" type="TextureRect" parent="MarginContainer/VBoxContainer/GridContainer"]
+[node name="InputRemapButtonShoot" parent="MarginContainer/VBoxContainer/GridContainer" instance=ExtResource("3_hroih")]
 layout_mode = 2
-texture = ExtResource("5_t5m2u")
+action = "shoot"
 
-[node name="button_reset_defaults" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="ButtonResetDefaults" type="Button" parent="MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 text = "Reset Defaults"
 
-[node name="button_back_to_options" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="ButtonBackToOptions" type="Button" parent="MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(500, 50)
 layout_mode = 2
 text = "Back"
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/button_back_to_options" to="." method="_on_button_back_to_options_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonBackToOptions" to="." method="_on_button_back_to_options_pressed"]

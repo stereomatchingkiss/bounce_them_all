@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=3 uid="uid://bgwprf7vqd7ft"]
+
+[ext_resource type="Script" uid="uid://42b8vbxh38cs" path="res://ui/menu/input_remap_button.gd" id="1_bmdo1"]
+[ext_resource type="Texture2D" uid="uid://dda3pwi2g64c4" path="res://assets/ui/input_prompts/keyboard_and_mouse/Vector/keyboard_arrow_up.svg" id="2_rw3q5"]
+[ext_resource type="Script" uid="uid://3urdt8w5y5fu" path="res://utils/key_mouse_to_assets_dict.gd" id="3_rw3q5"]
+
+[node name="InputRemapButton" type="Button"]
+custom_minimum_size = Vector2(140, 80)
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("1_bmdo1")
+action = "jump"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -53.0
+offset_top = -40.0
+offset_right = 53.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="TextureRectKey" type="TextureRect" parent="MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("2_rw3q5")
+
+[node name="KeyboardDicts" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("3_rw3q5")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
+[connection signal="toggled" from="." to="." method="_on_toggled"]
