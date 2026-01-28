@@ -1,14 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://c6fybarcwkd2v"]
+[gd_scene load_steps=7 format=3 uid="uid://c6fybarcwkd2v"]
 
 [ext_resource type="Script" uid="uid://c24b7754ya1ya" path="res://sounds/sound_manager_enemy_base.gd" id="1_73lxw"]
 [ext_resource type="AudioStream" uid="uid://ucd66j7jmvsy" path="res://assets/sounds/sound_effects/hit_enemy.ogg" id="2_h2jtv"]
+[ext_resource type="AudioStream" uid="uid://f8oukj2h414w" path="res://assets/sounds/sound_effects/514640__freesoundmozardes__ball-single-bounce-concrete-1.mp3" id="3_bufow"]
 [ext_resource type="AudioStream" uid="uid://f3lyd4ein2aa" path="res://assets/sounds/sound_effects/69_Enemy_death_01.ogg" id="3_j8ypl"]
 [ext_resource type="AudioStream" uid="uid://bmdluxbrne33p" path="res://assets/sounds/sound_effects/14_human_death_spin.ogg" id="4_h2jtv"]
+[ext_resource type="AudioStream" uid="uid://bt86cjngk6tqp" path="res://assets/sounds/sound_effects/108737__branrainey__boing.wav" id="7_0y4m4"]
 
 [node name="SoundManagerEnemyBase" type="Node"]
 script = ExtResource("1_73lxw")
 
 [node name="sound_effects" type="Node" parent="."]
+
+[node name="ball_hit_wall_or_ground" type="AudioStreamPlayer" parent="sound_effects"]
+unique_name_in_owner = true
+stream = ExtResource("3_bufow")
 
 [node name="hit_enemy_by_arrow" type="AudioStreamPlayer" parent="sound_effects"]
 unique_name_in_owner = true
@@ -24,3 +30,7 @@ bus = &"Sound"
 unique_name_in_owner = true
 stream = ExtResource("4_h2jtv")
 bus = &"Sound"
+
+[node name="player_hit_ball" type="AudioStreamPlayer" parent="sound_effects"]
+unique_name_in_owner = true
+stream = ExtResource("7_0y4m4")

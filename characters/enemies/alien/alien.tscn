@@ -4843,23 +4843,25 @@ animation_player_ = NodePath("../../AnimationPlayer")
 sound_manager_enemy_ = NodePath("../../SoundManagerEnemyBase")
 timer_get_hit_ = NodePath("../../timers/timer_get_hit")
 
-[node name="state_to_ball" type="LimboState" parent="LimboHSM" node_paths=PackedStringArray("timer_reover_to_enemy_")]
+[node name="state_to_ball" type="LimboState" parent="LimboHSM" node_paths=PackedStringArray("_timer_reover_to_enemy", "_sound_manager_enemy_base")]
 script = ExtResource("8_dqr31")
-timer_reover_to_enemy_ = NodePath("../../timers/timer_reover_to_enemy")
+_timer_reover_to_enemy = NodePath("../../timers/timer_reover_to_enemy")
+_sound_manager_enemy_base = NodePath("../../SoundManagerEnemyBase")
 
 [node name="state_dead" type="LimboState" parent="LimboHSM" node_paths=PackedStringArray("animation_player_", "sound_manager_enemy_")]
 script = ExtResource("9_71p70")
 animation_player_ = NodePath("../../AnimationPlayer")
 sound_manager_enemy_ = NodePath("../../SoundManagerEnemyBase")
 
-[node name="bullet_ball_utils" type="Node" parent="." node_paths=PackedStringArray("area_attack_player_", "area_hit_by_bullet_", "bullet_ball_", "character_armature_", "enemy_", "limbo_hsm_")]
+[node name="bullet_ball_utils" type="Node" parent="." node_paths=PackedStringArray("_area_attack_player", "_area_hit_by_bullet", "_bullet_ball", "_character_armature", "_enemy", "_limbo_hsm", "_sound_manager_enemy_base")]
 script = ExtResource("10_dqr31")
-area_attack_player_ = NodePath("../AreaAttackPlayer")
-area_hit_by_bullet_ = NodePath("../AreaHitByBullet")
-bullet_ball_ = NodePath("../bullet_ball")
-character_armature_ = NodePath("../CharacterArmature")
-enemy_ = NodePath("..")
-limbo_hsm_ = NodePath("../LimboHSM")
+_area_attack_player = NodePath("../AreaAttackPlayer")
+_area_hit_by_bullet = NodePath("../AreaHitByBullet")
+_bullet_ball = NodePath("../bullet_ball")
+_character_armature = NodePath("../CharacterArmature")
+_enemy = NodePath("..")
+_limbo_hsm = NodePath("../LimboHSM")
+_sound_manager_enemy_base = NodePath("../SoundManagerEnemyBase")
 
 [node name="state_machine_utils" type="Node" parent="."]
 unique_name_in_owner = true

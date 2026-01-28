@@ -1,14 +1,15 @@
 extends LimboState
 
-@export var timer_reover_to_enemy_: Timer
+@export var _timer_reover_to_enemy: Timer
+@export var _sound_manager_enemy_base: SoundManagerEnemyBase
 
 var bounce_limit_ := 5
 
 func _ready() -> void:
-	timer_reover_to_enemy_.timeout.connect(_recover_to_enemy)
+	_timer_reover_to_enemy.timeout.connect(_recover_to_enemy)
 	
 func _enter() -> void:
-	timer_reover_to_enemy_.start()
+	_timer_reover_to_enemy.start()
 	agent.change_to_bullet_ball()
 	agent.velocity.y = 0.7
 	
@@ -26,12 +27,15 @@ func _bounce_ball(collide :  KinematicCollision3D) ->void:
 func _update(delta: float) -> void:	
 	if agent.get_collision_mask_value(4):
 		var collide = agent.move_and_collide(agent.velocity * delta)
-		if collide:
-			if collide.get_collider().get_class() != "CharacterBody3D":
-				bounce_limit_ -= 1
-				if bounce_limit_ > 0:
-					_bounce_ball(collide)
-				else:
-					agent.queue_free()
+		if not collide:
+			return
+			
+		if collide.get_collider().get_class() != "CharacterBody3D":
+			bounce_limit_ -= 1
+			if bounce_limit_ > 0:
+				_sound_manager_enemy_base.play_ball_hit_wall()
+				_bounce_ball(collide)
+			else:
+				agent.queue_free()
 	else:
 		agent.move_and_slide()
