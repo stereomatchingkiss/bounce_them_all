@@ -14,6 +14,7 @@ A collection of independent game projects for practicing game development with G
 - [freesound.org](https://freesound.org)
 	- [hit by arrow](https://freesound.org/people/braqoon/sounds/161098/)
 	- [ball_hit_wall_or_ground](https://freesound.org/people/freesoundMozardes/sounds/514640/)
+	- [player_hit_ball](https://freesound.org/people/BranRainey/sounds/108737/)
 - [freePd](https://freepd.com/)
 
 ## Graphics
