@@ -1,10 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://b5hwyp7pgmxp2"]
+[gd_scene format=3 uid="uid://b5hwyp7pgmxp2"]
 
 [ext_resource type="Theme" uid="uid://b1woour2wjax0" path="res://assets/themes/theme_options.tres" id="1_eo0r8"]
 [ext_resource type="Script" uid="uid://dci6gtjaj6s3f" path="res://ui/menu/options_keyboard.gd" id="2_qf8xt"]
 [ext_resource type="PackedScene" uid="uid://bgwprf7vqd7ft" path="res://ui/menu/input_remap_button.tscn" id="3_hroih"]
 
-[node name="OptionsKeyBoard" type="Control"]
+[node name="OptionsKeyBoard" type="Control" unique_id=776505675]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -14,7 +14,7 @@ grow_vertical = 2
 theme = ExtResource("1_eo0r8")
 script = ExtResource("2_qf8xt")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1573260615]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -27,71 +27,82 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1079408704]
 layout_mode = 2
 
-[node name="LabelTitle" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="LabelTitle" type="Label" parent="MarginContainer/VBoxContainer" unique_id=776731302]
 layout_mode = 2
 text = "Keyboard"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer"]
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer" unique_id=177514663]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 3
 theme_override_constants/h_separation = 8
 columns = 4
 
-[node name="LabelLeft" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+[node name="LabelLeft" type="Label" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=1304656967]
 layout_mode = 2
 theme_type_variation = &"LabelNormal"
 text = "Left"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="InputRemapButtonLeft" parent="MarginContainer/VBoxContainer/GridContainer" instance=ExtResource("3_hroih")]
+[node name="InputRemapButtonLeft" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=569325379 instance=ExtResource("3_hroih")]
 layout_mode = 2
 action = "left"
 
-[node name="LabelRight" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+[node name="LabelRight" type="Label" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=1821315005]
 layout_mode = 2
 theme_type_variation = &"LabelNormal"
 text = "Right"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="InputRemapButtonRight" parent="MarginContainer/VBoxContainer/GridContainer" instance=ExtResource("3_hroih")]
+[node name="InputRemapButtonRight" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=1078730 instance=ExtResource("3_hroih")]
 layout_mode = 2
 action = "right"
 
-[node name="LabelJump" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+[node name="LabelDown" type="Label" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=1044936707]
+layout_mode = 2
+theme_type_variation = &"LabelNormal"
+text = "Down"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="InputRemapButtonDown" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=325560553 instance=ExtResource("3_hroih")]
+layout_mode = 2
+action = "down"
+
+[node name="LabelJump" type="Label" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=1305384129]
 layout_mode = 2
 theme_type_variation = &"LabelNormal"
 text = "Jump"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="InputRemapButtonJump" parent="MarginContainer/VBoxContainer/GridContainer" instance=ExtResource("3_hroih")]
+[node name="InputRemapButtonJump" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=850119746 instance=ExtResource("3_hroih")]
 layout_mode = 2
 
-[node name="LabelShoot" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+[node name="LabelShoot" type="Label" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=1998921519]
 layout_mode = 2
 theme_type_variation = &"LabelNormal"
 text = "Attack"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="InputRemapButtonShoot" parent="MarginContainer/VBoxContainer/GridContainer" instance=ExtResource("3_hroih")]
+[node name="InputRemapButtonShoot" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=49309416 instance=ExtResource("3_hroih")]
 layout_mode = 2
 action = "shoot"
 
-[node name="ButtonResetDefaults" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="ButtonResetDefaults" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1051826166]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 text = "Reset Defaults"
 
-[node name="ButtonBackToOptions" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="ButtonBackToOptions" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1509915425]
 custom_minimum_size = Vector2(500, 50)
 layout_mode = 2
 text = "Back"
